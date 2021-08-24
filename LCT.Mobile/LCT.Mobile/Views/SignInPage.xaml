@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.Views.SignInPage"
+             Style="{StaticResource Background}">
+
+    <StackLayout Padding="25"
+                 VerticalOptions="Center">
+        <Label Text="Email" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Email}" Placeholder="enter email" Keyboard="Email" Style="{StaticResource EntryTextStyles}"/>
+        <Label Text="Password" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Password}" Placeholder="enter password" IsPassword="True" MaxLength="8" Style="{StaticResource EntryTextStyles}"/>
+        <Button Text="Sign in" Command="{Binding SignInCommand}" Style="{StaticResource LoginButtons}" Margin="40" Clicked="SıgnInButton_Clicked"/>
+    </StackLayout>
+    
+</ContentPage>

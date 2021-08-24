@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<framework:BaseContentPage
+    x:Class="LCT.Mobile.Views.MakbuzPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:framework="clr-namespace:LCT.Mobile.Framework"
+    xmlns:viewModel="clr-namespace:LCT.Mobile.ViewModels"
+    x:TypeArguments="viewModel:MakbuzViewModel" >
+
+    <ContentPage.BindingContext>
+        <viewModel:MakbuzViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Padding="20" Spacing="20" BackgroundColor="LightGray" >
+                <Frame CornerRadius="35"  >
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="White"
+                          Offset="0.1" />
+                            <GradientStop Color="#4557c7"
+                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout>
+                        <Label
+                FontAttributes="Bold"
+                FontSize="35"
+                HorizontalOptions="Center"
+                TextColor="DarkBlue"
+                FontFamily="FontFam"
+                Text="RECEIPTS"
+                Padding="18"/>
+                        <ListView 
+                ItemSelected="Handle_ItemSelected"
+                ItemsSource="{Binding Makbuzlar}" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Padding="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding Image}"  
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                            <Label 
+                                   Grid.Column="1" 
+                                   Text="{Binding Name}"
+                                   TextColor="Black"
+                                   FontSize="21"
+                                   FontAttributes="Bold" />
+                                            <Label  Grid.Column="2" 
+                                   TextColor="black"
+                                   FontSize="19"
+                                   Text="{Binding Description}"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</framework:BaseContentPage>

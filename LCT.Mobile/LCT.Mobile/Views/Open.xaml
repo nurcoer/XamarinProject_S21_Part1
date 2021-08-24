@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.Views.Open"
+             xmlns:pages="clr-namespace:LCT.Mobile.Views"
+           
+            >
+  <FlyoutPage.Flyout >
+    <pages:OpenFlyout x:Name="FlyoutPage" />
+  </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail >
+        <NavigationPage  BarBackgroundColor="#4562c8" BarTextColor="White" >
+            <x:Arguments>
+                <pages:OpenDetail  />
+            </x:Arguments>
+
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

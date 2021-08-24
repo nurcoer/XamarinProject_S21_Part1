@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.App"
+            >
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="MainButton">
+                <Setter Property="BackgroundColor" Value="#e7fcff"></Setter>
+                <Setter Property="TextColor" Value="#4557c7"></Setter>
+                <Setter Property="FontFamily" Value="FontFam"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="CornerRadius" Value="35"></Setter>
+                <Setter Property="BorderColor" Value="#4557c7"></Setter>
+                <Setter Property="BorderWidth" Value="2"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center" ></Setter>
+                <Setter Property="HeightRequest" Value="60"></Setter>
+                <Setter Property="WidthRequest" Value="295"></Setter>
+                <Setter Property="CharacterSpacing" Value="1.2"></Setter>
+            </Style>
+            <Style TargetType="Button" x:Key="SecButton">
+                <Setter Property="BackgroundColor" Value="#4557c7"></Setter>
+                <Setter Property="TextColor" Value="#ffffff"></Setter>
+                <Setter Property="FontFamily" Value="FontFam"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="CornerRadius" Value="35"></Setter>
+                <Setter Property="BorderColor" Value="#e7fcff"></Setter>
+                <Setter Property="BorderWidth" Value="2"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center" ></Setter>
+                <Setter Property="HeightRequest" Value="60"></Setter>
+                <Setter Property="WidthRequest" Value="295"></Setter>
+                <Setter Property="CharacterSpacing" Value="1.2"></Setter>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="MainFrame">
+                <Setter Property="CornerRadius" Value="20"></Setter>
+                <Setter Property="Margin" Value="4"></Setter>
+                <Setter Property="BorderColor" Value="#4557c7"></Setter>
+                <Setter Property="HasShadow" Value="True"></Setter>
+                <Setter Property="Background" >
+                    <Setter.Value>
+                        <LinearGradientBrush >
+                            <GradientStop Color="#f6fbfc" Offset="1.0"/>
+                            <GradientStop Color="#e7fcff" Offset="0.1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                
+                
+            </Style>
+            <Style TargetType="Entry" x:Key="MainEntry">
+                <Setter Property="FontFamily" Value="FontFam"></Setter>
+                <Setter Property="PlaceholderColor" Value="Black"></Setter>
+                <Setter Property="ClearButtonVisibility" Value="WhileEditing"></Setter>
+            </Style>
+            <Style TargetType="FlyoutPage" ApplyToDerivedTypes="True">
+               
+                
+            </Style>
+            <Style x:Key="NavigationPageStyle" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#4557c7" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="LoginButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="DarkBlue"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="Background" TargetType="ContentPage">
+                <Setter Property="BackgroundImageSource" Value="bg.jpg"/>
+                <Setter Property="Opacity" Value="0.7"/>
+            </Style>
+
+            <Style x:Key ="LabelTextStyles" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="25"/>
+            </Style>
+
+            <Style x:Key ="EntryTextStyles" TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+            </Style>
+            
+            <Style BasedOn="{StaticResource NavigationPageStyle}" TargetType="NavigationPage" />
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

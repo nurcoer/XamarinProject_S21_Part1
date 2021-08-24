@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<framework:BaseContentPage
+    x:Class="LCT.Mobile.Views.MakbuzDetail"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:framework="clr-namespace:LCT.Mobile.Framework"
+    xmlns:viewmodels="clr-namespace:LCT.Mobile.ViewModels"
+    x:TypeArguments="viewmodels:MakbuzDetailViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MakbuzDetailViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout BackgroundColor="Azure">
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="200"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="{Binding Makbuz.Image}"
+                    WidthRequest="200" />
+                <Frame
+                    BorderColor="#4557c7"
+                    CornerRadius="15"
+                    HasShadow="True"
+                    HeightRequest="400">
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Offset="0.1" Color="Azure" />
+                            <GradientStop Offset="1.0" Color="#4557c7" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout>
+
+                        <Label Padding="12">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        FontSize="Large"
+                                        Text="NAME: "
+                                        TextColor="Black" />
+                                    <Span Text=" " />
+                                    <Span Text=" " />
+                                    <Span
+                                        FontAttributes="Bold"
+                                        FontSize="21"
+                                        Text="{Binding Makbuz.Name}"
+                                        TextColor="Black" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Padding="12">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        FontSize="Large"
+                                        Text="DESCRIPTION: "
+                                        TextColor="Black" />
+                                    <Span Text=" " />
+                                    <Span Text=" " />
+                                    <Span
+                                        FontAttributes="Bold"
+                                        FontSize="21"
+                                        Text="{Binding Makbuz.Description}"
+                                        TextColor="Black" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Padding="12">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        FontSize="Large"
+                                        Text="DATE: "
+                                        TextColor="Black" />
+                                    <Span Text=" " />
+                                    <Span Text=" " />
+                                    <Span
+                                        FontAttributes="Bold"
+                                        FontSize="21"
+                                        Text="{Binding Makbuz.Date}"
+                                        TextColor="Black" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Padding="12">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        FontSize="Large"
+                                        Text="AMOUNT: "
+                                        TextColor="Black" />
+                                    <Span Text=" " />
+                                    <Span Text=" " />
+                                    <Span
+                                        FontAttributes="Bold"
+                                        FontSize="21"
+                                        Text="{Binding Makbuz.Amount}"
+                                        TextColor="Black" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Padding="12" />
+                        <Button
+                            BackgroundColor="LightGray"
+                            BorderColor="#4557c7"
+                            BorderWidth="3"
+                            CharacterSpacing="1.2"
+                            CornerRadius="35"
+                            FontSize="21"
+                            HeightRequest="50"
+                            HorizontalOptions="Center"
+                            Text="DELETE THIS"
+                            TextColor="DarkBlue"
+                            WidthRequest="295" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</framework:BaseContentPage>

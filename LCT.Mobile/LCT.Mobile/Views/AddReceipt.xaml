@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:LCT.Mobile.ViewModels" x:DataType="viewmodels:AddReceiptViewModel"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="LCT.Mobile.Views.AddReceipt"
+             BackgroundColor="#4557c7"   
+             
+            >
+    <ContentPage.BindingContext>
+        <viewmodels:AddReceiptViewModel  />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+
+        <ScrollView Orientation="Vertical">
+            <StackLayout Padding="3" >
+
+                <Frame HasShadow="True" CornerRadius="50" Padding="15,20,10,20" Margin="5" >
+                    <StackLayout Spacing="40" Margin="20"  VerticalOptions="EndAndExpand" BackgroundColor="White" >
+                        <Image  Source="{Binding CapImage}"  ></Image>
+                        <Button   Text="Capture Image" WidthRequest="300" Style="{StaticResource SecButton}" Command="{Binding TakePhoto}"></Button>
+                        <Entry x:Name="txtname" Style="{StaticResource MainEntry}" Placeholder="Name" Text="{Binding Name}" />
+                        <Entry x:Name="txtdescription" Style="{StaticResource MainEntry}" Placeholder="Description"  Text="{Binding Description}"/>
+                        <DatePicker Date="{Binding Date ,TargetNullValue={x:Static sys:DateTime.Now},Mode=TwoWay}" Format="dd/MM/yyyy"  />
+                        <Entry x:Name="intamount" Style="{StaticResource MainEntry}" Placeholder="0.00" Text="{Binding Amount}" Keyboard="Numeric"></Entry>
+                        <Button Style="{StaticResource SecButton}" Text="Add Receipt"  Command="{Binding AddCommand}" Clicked="Button_Clicked"></Button>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

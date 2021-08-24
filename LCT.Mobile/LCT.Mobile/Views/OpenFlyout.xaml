@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.Views.OpenFlyout"
+             Title="Flyout"
+             BackgroundColor="#f6fbfc">
+
+    <StackLayout>
+        
+            <Frame x:Name="circleFrame" CornerRadius="150" HasShadow="True" Padding="10" Margin="10" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+            <Image x:Name="circleImg" Source="receipt" ></Image>
+        </Frame>
+        <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+               Margin="50"
+              ItemsSource="{Binding MenuItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout  HorizontalOptions="FillAndExpand">
+                            <Label Padding="0,10" VerticalOptions="FillAndExpand" 
+       VerticalTextAlignment="Center" 
+      Text="{Binding Title}" 
+      TextColor="#4557c7"
+      FontSize="24"
+        FontFamily="FontFam"                           
+      />
+     </StackLayout>
+                        
+    </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+        
+  </StackLayout>
+</ContentPage>

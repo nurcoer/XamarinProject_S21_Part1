@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.Views.SignUpPage"
+             Style="{StaticResource Background}">
+
+    <StackLayout Padding="25"
+                 VerticalOptions="Center">
+        <Label Text="Name" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Name}" Placeholder="enter name" Style="{StaticResource EntryTextStyles}"/>
+        <Label Text="Surname" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Surname}" Placeholder="enter surname" Style="{StaticResource EntryTextStyles}"/>
+        <Label Text="Email" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Email}" Placeholder="enter email" Keyboard="Email" Style="{StaticResource EntryTextStyles}"/>
+        <Label Text="Password" Style="{StaticResource LabelTextStyles}"/>
+        <Entry Text="{Binding Password}" Placeholder="enter password" IsPassword="True" MaxLength="8" Style="{StaticResource EntryTextStyles}"/>
+        <Button Text="Sign up" Command="{Binding SignUpCommand}" Style="{StaticResource LoginButtons}" Margin="40"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+    </StackLayout>
+    
+</ContentPage>
