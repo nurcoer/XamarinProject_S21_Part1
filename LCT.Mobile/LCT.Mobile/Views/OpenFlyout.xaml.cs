@@ -35,7 +35,7 @@ namespace LCT.Mobile.Views
                 {
                     new OpenFlyoutMenuItem { Id = 0, Title = "Receipts" ,TargetType=typeof(MakbuzPage)},
                     new OpenFlyoutMenuItem { Id = 1, Title = "Add Receipt" ,TargetType =typeof(AddReceipt)},
-                    new OpenFlyoutMenuItem { Id = 2, Title = "Edit Profile" },
+                    new OpenFlyoutMenuItem { Id = 2, Title = "Edit Profile", TargetType =typeof(EditProfilePage) },
                     new OpenFlyoutMenuItem { Id = 4, Title = "Log Out" },
                     
                 });

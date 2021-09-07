@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LCT.Mobile.Views.EditProfilePage"
+             BackgroundColor="#4557c7">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Padding="5" >
+                <Frame HasShadow="True" CornerRadius="50" Padding="15,20,10,20" Margin="5" >
+                    <StackLayout Spacing="40" Margin="20"  VerticalOptions="EndAndExpand" BackgroundColor="White" >
+                        <Image HorizontalOptions="Center" Source="editprofile.jpg" WidthRequest="300" ></Image>
+                        <Entry  x:Name="txtname" Style="{StaticResource MainEntry}" Placeholder="Name"></Entry>
+                        <Entry  x:Name="txtemail" Style="{StaticResource MainEntry}" Placeholder="E-mail"></Entry>
+                        <Entry  x:Name="txtpassword" Style="{StaticResource MainEntry}" Placeholder="Password" IsPassword="True"></Entry>
+                        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="2" Grid.Column="2" Text="Forward Receipts To My E-Mail" VerticalOptions="Start"  FontSize="20" TextColor="Black"/>
+                            <CheckBox Grid.Row="2" Grid.Column="1" VerticalOptions="End" />
+                            <Label Grid.Row="1" Grid.Column="2" Text="Show Password" VerticalOptions="Start" FontSize="20" TextColor="Black"/>
+                            <CheckBox Grid.Row="1" Grid.Column="1" VerticalOptions="End" />
+                        </Grid>
+                        <Picker Title="Receipts Language" >
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>English</x:String>
+                                    <x:String>Turkish</x:String>
+                                    <x:String>French</x:String>
+                                    <x:String>German</x:String>
+                                    <x:String>Italian</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Button   Text="SAVE" WidthRequest="300" Style="{StaticResource SecButton}" ></Button>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
